@@ -39,4 +39,4 @@ def foo(arg1, arg2):
 
 foo(a.append("arg1"), a.append("arg2"))
 
-print(a)
+print(type(foo))
