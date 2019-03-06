@@ -10,18 +10,20 @@ def add(namespace, var):
 
 def get(namespace,var):
 	if namespace in dic:
+		print("test0:",namespace)
+		print("test0.1",dic[namespace]['parent'])
+
 		if var in dic[namespace]['vars']:
 			print ("test1:",namespace)
-			return namespace
-		elif dic[namespace]['parent'] == "None":
+			return "=" + namespace
+		elif dic[namespace]['parent'] == "global":
 			print("test2:",namespace)
 			if var in dic['global']['vars']:
-				return "global"
+				return "=global:"
 			else:
-				return "None"
+				return "=None:"
 		else:
 			get(dic[namespace]['parent'],var)
-
 				
 
 for i in range(n):
@@ -32,6 +34,7 @@ for i in range(n):
 	elif cmd == "add":
 		add(nmsp,var)
 	elif cmd == "get":
+		print ("incoming:", nmsp, var)
 		print(get(nmsp,var))
 
 print(dic)
