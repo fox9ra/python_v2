@@ -40,3 +40,15 @@ for i in range(n):
 		print(get(nmsp,var))
 
 #print(dic)
+
+'''
+#good stepic
+dct={'global':['None']}                                             # словарь списков(родитель,переменные)
+for ops, nms, v in [input().split() for i in range(int(input()))]:  # цикл операций(копипаст у Vladmir Ryabov)
+    if   ops=='create':dct[nms]=[v]                                 # создать пространство-новый список в словаре
+    elif ops=='add'   :dct[nms].append(v)                           # новая переменная-добавить в список
+    elif ops=='get':                                                # поиск переменной (циклом)
+        while nms!='None' and v not in dct[nms]:                    # если нет в пространстве-меняем на родителя(пока не None)
+            nms=dct[nms][0]                     
+        print(nms)
+'''
