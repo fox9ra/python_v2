@@ -1,4 +1,4 @@
-'''
+
 class Counter:
 	def __init__(self):  # обнуление функцией __init__
 		self.count = 0
@@ -17,8 +17,9 @@ Counter.inc(x) # равносильно вызову x.inc()
 print(x.count)
 x.reset()
 print(x.count)
-'''
 
+'''
+#from stepik
 class A:
     def __init__(self, val=0):
         self.val = val
@@ -29,6 +30,7 @@ class A:
     def print_val(self):
         print(self.val)
 
+'''
 
 a = A()
 b = A(2)
